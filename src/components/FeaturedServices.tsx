@@ -1,4 +1,3 @@
-
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ServiceCard from './ServiceCard';
@@ -86,14 +85,14 @@ const FeaturedServices = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-pastel-mint/30">
+    <section className="py-20 bg-gradient-to-b from-background to-accent/10">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             Featured <span className="gradient-text">Services</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
             Discover amazing services from talented students in your area
           </p>
           
@@ -106,7 +105,7 @@ const FeaturedServices = () => {
                 className={`rounded-full px-6 py-2 ${
                   category === 'All' 
                     ? 'bg-gradient-to-r from-brand-blue to-brand-purple text-white' 
-                    : 'bg-white/80 backdrop-blur-sm hover:bg-white'
+                    : 'bg-card backdrop-blur-sm hover:bg-accent'
                 }`}
               >
                 {category}

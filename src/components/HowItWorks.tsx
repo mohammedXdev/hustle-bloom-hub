@@ -30,14 +30,14 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             How It <span className="gradient-text">Works</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Start your side hustle journey in four simple steps
           </p>
         </div>
@@ -52,11 +52,11 @@ const HowItWorks = () => {
             >
               {/* Connection Line (Desktop) */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-gray-200 to-gray-300 z-0" />
+                <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-border to-muted z-0" />
               )}
               
               {/* Step Card */}
-              <div className="relative glass-card rounded-3xl p-8 text-center hover:shadow-2xl transition-all duration-300 group-hover:scale-105 bg-white/80">
+              <div className="relative glass-card rounded-3xl p-8 text-center hover:shadow-2xl transition-all duration-300 group-hover:scale-105">
                 {/* Step Number */}
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-to-r from-brand-blue to-brand-purple rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
                   {index + 1}
@@ -68,10 +68,10 @@ const HowItWorks = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold mb-3 text-gray-800">
+                <h3 className="text-xl font-bold mb-3 text-foreground">
                   {step.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -81,11 +81,11 @@ const HowItWorks = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <div className="glass-card rounded-4xl p-8 bg-gradient-to-r from-pastel-blue to-pastel-purple max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4 text-gray-800">
+          <div className="glass-card rounded-4xl p-8 bg-gradient-to-r from-accent/20 to-secondary/20 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold mb-4 text-foreground">
               Ready to start your journey?
             </h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-muted-foreground mb-6">
               Join thousands of students already earning money with their skills
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

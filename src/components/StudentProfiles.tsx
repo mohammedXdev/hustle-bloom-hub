@@ -1,4 +1,3 @@
-
 import { MapPin, Star, Badge as BadgeIcon } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
@@ -59,14 +58,14 @@ const StudentProfiles = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-pastel-mint/30 to-white">
+    <section className="py-20 bg-gradient-to-b from-accent/10 to-background">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             Meet Our <span className="gradient-text">Top Students</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Connect with talented students from top universities
           </p>
         </div>
@@ -76,7 +75,7 @@ const StudentProfiles = () => {
           {students.map((student, index) => (
             <div
               key={index}
-              className="glass-card rounded-3xl p-6 hover:shadow-2xl transform hover:scale-105 transition-all duration-300 group animate-slide-up bg-white/90"
+              className="glass-card rounded-3xl p-6 hover:shadow-2xl transform hover:scale-105 transition-all duration-300 group animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Header */}
@@ -88,31 +87,31 @@ const StudentProfiles = () => {
                     className="w-20 h-20 rounded-full object-cover shadow-lg"
                   />
                   {/* Online Status */}
-                  <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-3 border-white flex items-center justify-center">
+                  <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-3 border-card flex items-center justify-center">
                     <div className="w-2 h-2 bg-white rounded-full"></div>
                   </div>
                 </div>
                 
-                <h3 className="font-bold text-lg text-gray-800 mb-1">
+                <h3 className="font-bold text-lg text-foreground mb-1">
                   {student.name}
                 </h3>
                 
-                <div className="text-sm text-gray-600 mb-2">
+                <div className="text-sm text-muted-foreground mb-2">
                   {student.major} • {student.university}
                 </div>
                 
                 <div className="flex items-center justify-center space-x-1 mb-3">
-                  <MapPin className="h-3 w-3 text-gray-400" />
-                  <span className="text-xs text-gray-500">{student.location}</span>
+                  <MapPin className="h-3 w-3 text-muted-foreground" />
+                  <span className="text-xs text-muted-foreground">{student.location}</span>
                 </div>
 
                 {/* Rating */}
                 <div className="flex items-center justify-center space-x-2 mb-4">
                   <div className="flex items-center space-x-1">
                     <Star className="h-4 w-4 text-yellow-500 fill-current" />
-                    <span className="text-sm font-semibold">{student.rating}</span>
+                    <span className="text-sm font-semibold text-foreground">{student.rating}</span>
                   </div>
-                  <span className="text-xs text-gray-500">
+                  <span className="text-xs text-muted-foreground">
                     ({student.completedGigs} gigs)
                   </span>
                 </div>
@@ -124,7 +123,7 @@ const StudentProfiles = () => {
                   {student.skills.map((skill, skillIndex) => (
                     <Badge
                       key={skillIndex}
-                      className="bg-pastel-blue text-brand-blue text-xs px-2 py-1"
+                      className="bg-brand-blue/20 text-brand-blue text-xs px-2 py-1"
                     >
                       {skill}
                     </Badge>
@@ -134,14 +133,14 @@ const StudentProfiles = () => {
 
               {/* Specialties */}
               <div className="mb-4">
-                <div className="text-xs font-medium text-gray-700 mb-2 text-center">
+                <div className="text-xs font-medium text-foreground mb-2 text-center">
                   Specializes in:
                 </div>
                 <div className="flex flex-wrap gap-1 justify-center">
                   {student.specialties.map((specialty, specIndex) => (
                     <span
                       key={specIndex}
-                      className="text-xs bg-pastel-purple text-brand-purple px-2 py-1 rounded-full"
+                      className="text-xs bg-brand-purple/20 text-brand-purple px-2 py-1 rounded-full"
                     >
                       {specialty}
                     </span>
@@ -150,19 +149,19 @@ const StudentProfiles = () => {
               </div>
 
               {/* Stats */}
-              <div className="border-t border-gray-100 pt-4">
+              <div className="border-t border-border pt-4">
                 <div className="flex justify-between items-center text-center">
                   <div>
                     <div className="text-lg font-bold text-green-600">
                       {student.earnings}
                     </div>
-                    <div className="text-xs text-gray-500">Earned</div>
+                    <div className="text-xs text-muted-foreground">Earned</div>
                   </div>
                   <div>
                     <div className="text-lg font-bold text-brand-blue">
                       {student.joinedMonths}mo
                     </div>
-                    <div className="text-xs text-gray-500">Active</div>
+                    <div className="text-xs text-muted-foreground">Active</div>
                   </div>
                 </div>
               </div>
@@ -177,7 +176,7 @@ const StudentProfiles = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">
+          <p className="text-muted-foreground mb-4">
             Want to join our community of successful student freelancers?
           </p>
           <button className="btn-primary">
