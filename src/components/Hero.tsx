@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-pastel-blue via-pastel-purple to-pastel-pink" />
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900" />
       
       {/* Floating Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -21,18 +21,18 @@ const Hero = () => {
           {/* Left Column - Content */}
           <div className="text-center lg:text-left animate-fade-in">
             {/* Badge */}
-            <div className="inline-flex items-center space-x-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg mb-6">
+            <div className="inline-flex items-center space-x-2 glass-card px-4 py-2 rounded-full shadow-lg mb-6">
               <Star className="h-4 w-4 text-yellow-500" />
-              <span className="text-sm font-medium text-gray-700">Trusted by 10,000+ students</span>
+              <span className="text-sm font-medium text-foreground">Trusted by 10,000+ students</span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-foreground">
               Your <span className="gradient-text">Side Hustle</span> Starts Here
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg mx-auto lg:mx-0">
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0">
               Connect with fellow students to offer your skills or find the services you need. 
               Turn your talents into income while building your network.
             </p>
@@ -51,25 +51,25 @@ const Hero = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 max-w-md mx-auto lg:mx-0">
               <div className="text-center">
-                <div className="flex items-center justify-center w-12 h-12 bg-white/90 rounded-2xl shadow-lg mx-auto mb-2">
+                <div className="flex items-center justify-center w-12 h-12 glass-card rounded-2xl shadow-lg mx-auto mb-2">
                   <Users className="h-6 w-6 text-brand-blue" />
                 </div>
-                <div className="text-2xl font-bold text-gray-800">10K+</div>
-                <div className="text-sm text-gray-600">Students</div>
+                <div className="text-2xl font-bold text-foreground">10K+</div>
+                <div className="text-sm text-muted-foreground">Students</div>
               </div>
               <div className="text-center">
-                <div className="flex items-center justify-center w-12 h-12 bg-white/90 rounded-2xl shadow-lg mx-auto mb-2">
+                <div className="flex items-center justify-center w-12 h-12 glass-card rounded-2xl shadow-lg mx-auto mb-2">
                   <TrendingUp className="h-6 w-6 text-brand-purple" />
                 </div>
-                <div className="text-2xl font-bold text-gray-800">50K+</div>
-                <div className="text-sm text-gray-600">Gigs Done</div>
+                <div className="text-2xl font-bold text-foreground">50K+</div>
+                <div className="text-sm text-muted-foreground">Gigs Done</div>
               </div>
               <div className="text-center">
-                <div className="flex items-center justify-center w-12 h-12 bg-white/90 rounded-2xl shadow-lg mx-auto mb-2">
+                <div className="flex items-center justify-center w-12 h-12 glass-card rounded-2xl shadow-lg mx-auto mb-2">
                   <Star className="h-6 w-6 text-brand-pink" />
                 </div>
-                <div className="text-2xl font-bold text-gray-800">4.9</div>
-                <div className="text-sm text-gray-600">Rating</div>
+                <div className="text-2xl font-bold text-foreground">4.9</div>
+                <div className="text-sm text-muted-foreground">Rating</div>
               </div>
             </div>
           </div>
@@ -93,7 +93,7 @@ const Hero = () => {
                     <span className="text-white font-bold">$</span>
                   </div>
                   <div>
-                    <div className="text-sm font-semibold">Earnings</div>
+                    <div className="text-sm font-semibold text-foreground">Earnings</div>
                     <div className="text-lg font-bold text-green-600">$2,450</div>
                   </div>
                 </div>
@@ -105,7 +105,7 @@ const Hero = () => {
                     <Star className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold">Rating</div>
+                    <div className="text-sm font-semibold text-foreground">Rating</div>
                     <div className="text-lg font-bold text-blue-600">5.0 ★</div>
                   </div>
                 </div>

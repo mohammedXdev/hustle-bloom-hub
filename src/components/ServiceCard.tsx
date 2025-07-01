@@ -69,19 +69,19 @@ const ServiceCard = ({
             className="w-8 h-8 rounded-full object-cover"
           />
           <div>
-            <div className="text-sm font-medium text-gray-800">{sellerName}</div>
+            <div className="text-sm font-medium text-foreground">{sellerName}</div>
             <div className="flex items-center space-x-1">
               <Star className="h-3 w-3 text-yellow-500 fill-current" />
-              <span className="text-xs text-gray-600">{rating} ({reviewCount})</span>
+              <span className="text-xs text-muted-foreground">{rating} ({reviewCount})</span>
             </div>
           </div>
         </div>
 
         {/* Title & Description */}
-        <h3 className="font-semibold text-gray-800 mb-2 line-clamp-2 group-hover:text-brand-blue transition-colors">
+        <h3 className="font-semibold text-foreground mb-2 line-clamp-2 group-hover:text-brand-blue transition-colors">
           {title}
         </h3>
-        <p className="text-sm text-gray-600 mb-4 line-clamp-2">
+        <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
           {description}
         </p>
 
@@ -90,7 +90,7 @@ const ServiceCard = ({
           {tags.slice(0, 3).map((tag, index) => (
             <span
               key={index}
-              className="px-2 py-1 bg-pastel-blue text-xs text-brand-blue rounded-full font-medium"
+              className="px-2 py-1 bg-brand-blue/20 text-xs text-brand-blue rounded-full font-medium"
             >
               {tag}
             </span>
@@ -98,13 +98,13 @@ const ServiceCard = ({
         </div>
 
         {/* Footer */}
-        <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+        <div className="flex items-center justify-between pt-4 border-t border-white/10">
           <div className="flex items-center space-x-2">
-            <Clock className="h-4 w-4 text-gray-400" />
-            <span className="text-sm text-gray-600">{deliveryTime}</span>
+            <Clock className="h-4 w-4 text-muted-foreground" />
+            <span className="text-sm text-muted-foreground">{deliveryTime}</span>
           </div>
           <div className="text-right">
-            <div className="text-sm text-gray-500">Starting at</div>
+            <div className="text-sm text-muted-foreground">Starting at</div>
             <div className="text-lg font-bold text-brand-blue">${price}</div>
           </div>
         </div>
